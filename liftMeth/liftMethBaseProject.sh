@@ -122,7 +122,7 @@ for file in `find  ${WDIR}/${proj} -type f -name "*.meth" | grep results_${SOURC
         ln -s $i $f
       done 
       cd ../
-      DIR=`find . -type d -name "tracks_mm10"| awk '{print length($0), $0}' | sort -k1,1g | head -1 | awk '{print $1}'`
+      DIR=`find . -type d -name "tracks_mm10"| awk '{print length($0), $0}' | sort -k1,1g | head -1 | awk '{print $2}'`
       mkdir tracks_mm10
       cd tracks_mm10
       for i in `ls "."${DIR}/*.*`; do 
